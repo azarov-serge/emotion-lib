@@ -16,3 +16,5 @@ const publish = async () => {
         console.log('End script "publish.js"')
     });   
 }
+
+publish();
