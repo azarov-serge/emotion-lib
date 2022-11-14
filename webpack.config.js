@@ -8,9 +8,9 @@ module.exports = (env, argv) => {
 		? {
 				"react": 'react',
         "react-dom": "react-dom",
-        "@emotion/core": "@emotion/core",
-        "@emotion/react": "@emotion/react",
-        "@emotion/styled": "@emotion/styled"
+        // "@emotion/core": "@emotion/core",
+        // "@emotion/react": "@emotion/react",
+        // "@emotion/styled": "@emotion/styled"
 		  }
 		: {};
 
