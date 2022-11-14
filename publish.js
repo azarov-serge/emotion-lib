@@ -12,6 +12,7 @@ const publish = async () => {
     
         console.log(`Current branch is ${branch}`);
         exec(`git push origin ${branch}`);
+        console.log(`Branch ${branch} pushed`);
     
         console.log('End script "publish.js"')
     });   
