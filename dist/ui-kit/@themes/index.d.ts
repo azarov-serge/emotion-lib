@@ -4,4 +4,4 @@ export declare enum Theme {
     foodCity = "foodCity",
     NFTea = "NFTea"
 }
-export declare const theme: Record<Theme, UiKitTheme>;
+export declare const uiKitTheme: Record<Theme, UiKitTheme>;

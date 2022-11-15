@@ -6,8 +6,6 @@ const publish = async () => {
     console.log('Start script "publish.js"')
     await exec('npm version patch');
 
-    console.log(`Version up to ${pkj.version}`);
-
     exec('git branch --show-current', async (err, stdout, stderr) => {
         if (err) {
             console.log('Error: ', err);

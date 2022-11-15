@@ -3,7 +3,7 @@ import { Provider as MOBXProvider } from 'mobx-react';
 import { ThemeProvider } from '@emotion/react';
 
 import { GlobalStyles } from './ui-kit/GlobalStyle';
-import { theme } from './ui-kit/@themes';
+import { uiKitTheme } from './ui-kit/@themes';
 import { DemoPage } from './pages';
 import * as baseStores from './ui-kit/base/stores';
 import { Messages } from './ui-kit/Message';
@@ -11,7 +11,7 @@ import { Messages } from './ui-kit/Message';
 export const App = () => {
 	
 	return (
-		<ThemeProvider theme={theme.foodCity}>
+		<ThemeProvider theme={uiKitTheme.foodCity}>
         <MOBXProvider {...baseStores}>
           <DemoPage />
           <GlobalStyles />

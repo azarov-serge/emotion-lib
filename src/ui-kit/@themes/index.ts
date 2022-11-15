@@ -8,7 +8,7 @@ export enum Theme {
   NFTea = 'NFTea',
 }
 
-export const theme: Record<Theme, UiKitTheme> = {
+export const uiKitTheme: Record<Theme, UiKitTheme> = {
   [Theme.foodCity]: foodCityTheme,
   [Theme.NFTea]: NFTeaTheme,
 };
