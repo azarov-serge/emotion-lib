@@ -1,0 +1,11 @@
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import '@/styles/globals.css';
+declare const _default: ComponentMeta<React.FC<import("./types").NavBarProps>>;
+export default _default;
+export declare const NavBarWithIconButton: ComponentStory<React.FC<import("./types").NavBarProps>>;
+export declare const NavBarWithIconTextButton: ComponentStory<React.FC<import("./types").NavBarProps>>;
+export declare const NavBarWithRightIconLeftButton: ComponentStory<React.FC<import("./types").NavBarProps>>;
+export declare const NavBarWithLeftIconRightButton: ComponentStory<React.FC<import("./types").NavBarProps>>;
+export declare const NavBarWithCenterButton: ComponentStory<React.FC<import("./types").NavBarProps>>;
+export declare const NavBarWithAllButton: ComponentStory<React.FC<import("./types").NavBarProps>>;

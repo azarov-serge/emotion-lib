@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 const { exec } = require('child_process');
+const pkj = require('./package.json');
 
 const publish = async () => {
     console.log('Start script "publish.js"')
     await exec('npm version patch');
-
-    await exec('git add .');
-    const pkj = require('./package.json');
-    await exec(`git commit -m "Up v${pkj.version}"`);
 
     console.log(`Version up to ${pkj.version}`);
 
@@ -18,7 +15,7 @@ const publish = async () => {
         const branch = stdout.replace('\n', '');
         console.log(`Current branch is ${branch}`);
         await exec(`git push origin ${branch}`);
-        console.log(`Branch ${branch} pushed`);
+        console.log(`Branch ${branch} with v${pkj.version} pushed`);
     
         console.log('End script "publish.js"')
     });   

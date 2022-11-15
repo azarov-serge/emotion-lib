@@ -6,11 +6,11 @@ module.exports = (env, argv) => {
 	const isProd = mode === 'production';
 	const externals = isProd
 		? {
-				"react": 'react',
-        "react-dom": "react-dom",
-        // "@emotion/core": "@emotion/core",
-        // "@emotion/react": "@emotion/react",
-        // "@emotion/styled": "@emotion/styled"
+				react: 'react',
+				'react-dom': 'react-dom',
+				// "@emotion/core": "@emotion/core",
+				// "@emotion/react": "@emotion/react",
+				// "@emotion/styled": "@emotion/styled"
 		  }
 		: {};
 
@@ -18,13 +18,16 @@ module.exports = (env, argv) => {
 		mode,
 		entry: isProd ? './src/index.ts' : './src/demo.tsx',
 		devtool: 'source-map',
-    output: {
+		output: {
 			filename: 'index.js',
 			path: path.resolve(__dirname, 'dist'),
 			libraryTarget: 'umd',
 			clean: true,
 		},
 		resolve: {
+			alias: {
+				'@': path.join(__dirname, './src'),
+			},
 			extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
 		},
 		externals,
@@ -39,6 +42,18 @@ module.exports = (env, argv) => {
 					use: ['babel-loader', 'ts-loader'],
 					exclude: /node_modules/,
 				},
+				{
+					test: /\.svg$/,
+					loader: require.resolve('@svgr/webpack'),
+				},
+				{
+					test: /\.(png|jpe?g|gif)$/i,
+					use: [
+					  {
+						loader: 'file-loader',
+					  },
+					],
+				  },
 			],
 		},
 
@@ -51,6 +66,7 @@ module.exports = (env, argv) => {
 		devServer: {
 			historyApiFallback: true,
 			port: 9009,
+			hot: true,
 		},
 	};
 };
