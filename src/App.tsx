@@ -1,12 +1,15 @@
+import { ThemeProvider } from '@emotion/react';
 import React from 'react';
-import { Button } from './Button';
-import { Balloon } from './Balloon';
+import { Paper, Button } from './ui-kit';
+import { uiKitTheme } from './ui-kit/theme';
 
 export const App = () => {
 	return (
-		<Balloon>
-			<Button>Primary</Button>
-			<Button kind="secondary">Secondary</Button>
-		</Balloon>
+		<ThemeProvider theme={uiKitTheme.BLUE_THEME}>
+			<Paper>
+				<Button>Primary</Button>
+				<Button kind="secondary">Secondary</Button>
+			</Paper>
+		</ThemeProvider>
 	);
 };

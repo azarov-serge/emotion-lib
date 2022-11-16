@@ -7,5 +7,5 @@ export interface ButtonProps
 		HTMLAttributes<HTMLButtonElement>,
 		HTMLButtonElement
 	> {
-        kind?: ButtonKind;
-    }
+	kind?: ButtonKind;
+}
