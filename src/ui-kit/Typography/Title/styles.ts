@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { FontFamily } from '@/ui-kit/@constants/font';
 import { css } from '@emotion/react';
-import { UiKitTheme } from '@/ui-kit/@themes';
+import { FontFamily } from '../../@constants/font';
+import { UiKitTheme } from '../../@themes';
 import { TitleProps } from './types';
 
 const H_BASE_STYLE = css`
