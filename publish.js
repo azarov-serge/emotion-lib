@@ -5,11 +5,11 @@ const publish = async () => {
     console.log('Start script "publish.js"')
     await exec('npm version patch');
 
-    exec('git branch --show-current', async (err, branch, stderr) => {
+    exec('git branch --show-current', async (err, stdout, stderr) => {
         if (err) {
             console.log('Error: ', err);
         }
-    
+        const branch = stdout.replace('\n', '');
         console.log(`Current branch is ${branch}`);
         await exec(`git push origin ${branch}`);
         console.log(`Branch ${branch} pushed`);
