@@ -1,15 +1,16 @@
 import { ThemeProvider } from '@emotion/react';
 import React from 'react';
-import { Paper, Button } from './ui-kit';
-import { uiKitTheme } from './ui-kit/theme';
+import { Title, GlobalStyle } from './ui-kit';
+import { uiKitTheme } from './ui-kit/@themes';
 
 export const App = () => {
 	return (
-		<ThemeProvider theme={uiKitTheme.BLUE_THEME}>
-			<Paper>
-				<Button>Primary</Button>
-				<Button kind="secondary">Secondary</Button>
-			</Paper>
+		<ThemeProvider theme={uiKitTheme.NFTea}>
+			<Title>H1</Title>
+			<Title level={2}>H2</Title>
+			<Title level={4}>H3</Title>
+			<Title level={4}>H4</Title>
+			<GlobalStyle />
 		</ThemeProvider>
 	);
 };

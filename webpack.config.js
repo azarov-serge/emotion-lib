@@ -6,7 +6,7 @@ module.exports = (env, argv) => {
 	const isProd = mode === 'production';
 	const externals = isProd
 		? {
-				'react': 'react',
+				react: 'react',
 				'react-dom': 'react-dom',
 				// "@emotion/core": "@emotion/core",
 				// "@emotion/react": "@emotion/react",
@@ -45,6 +45,14 @@ module.exports = (env, argv) => {
 				},
 				{
 					test: /\.(png|jpe?g|gif)$/i,
+					use: [
+						{
+							loader: 'file-loader',
+						},
+					],
+				},
+				{
+					test: /\.(ttf|otf)$/i,
 					use: [
 						{
 							loader: 'file-loader',

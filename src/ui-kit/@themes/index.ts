@@ -3,12 +3,12 @@ import { theme as NFTeaTheme } from './NFTea';
 import { UiKitTheme } from './types';
 export * from './types';
 
-export enum Theme {
+export enum ThemeName {
   foodCity = 'foodCity',
   NFTea = 'NFTea',
 }
 
-export const uiKitTheme: Record<Theme, UiKitTheme> = {
-  [Theme.foodCity]: foodCityTheme,
-  [Theme.NFTea]: NFTeaTheme,
+export const uiKitTheme: Record<ThemeName, UiKitTheme> = {
+  [ThemeName.foodCity]: foodCityTheme,
+  [ThemeName.NFTea]: NFTeaTheme,
 };

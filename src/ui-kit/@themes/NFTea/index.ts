@@ -1,11 +1,10 @@
-import { theme as foodCityTheme } from '../foodCity';
-import { button } from './button';
-import { inputBase } from './inputBase';
+// Ui-Kit
 import { UiKitTheme } from '../types';
+import { global } from './global';
+import { title } from './title';
 
 export const theme: UiKitTheme = {
-  ...foodCityTheme, // дефолтная тема
-
-  // button,
-  // inputBase,
+	global,
+	// Ui-Kit
+	title,
 };
