@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { Color, FontFamily, FontWeight } from '../../@constants';
-import { TitleStyle } from '../types';
+import { Color } from '../color';
+import {font } from '../font'
+import { TitleTheme } from '../../types';
 
 const H_BASE_STYLE = css`
-	font-family: ${FontFamily.SFPro};
+	font-family: ${font.family1};
 	font-weight: 700;
 	font-style: normal;
 
-	color: ${Color.foodCity.Black_Oven};
+	color: ${Color.Black_Oven};
 `;
 
 const h1 = css`
@@ -31,14 +32,14 @@ const h3 = css`
 `;
 
 const h4 = css`
-	font-family: ${FontFamily.SFProText};
+	font-family: ${font.family3};
 	font-size: 17px;
 	font-weight: 600;
 	font-style: normal;
 	line-height: 22px;
 `;
 
-export const title: TitleStyle = {
+export const title: TitleTheme = {
 	h1,
 	h2,
 	h3,

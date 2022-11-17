@@ -1,19 +1,19 @@
-import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { Color, FontFamily, FontWeight } from '../../@constants';
-import {TitleStyle} from '../types';
+import { Color } from '../color';
+import { TitleTheme } from '../../types';
+import {font} from '../font';
 
 const H_BASE_STYLE = css`
-	font-family: ${FontFamily.HalvarMittelschrift};
+	font-family: ${font.family2};
 	font-style: normal;
-	font-weight: ${FontWeight.w700};
+	font-weight: 700;
 
-	color: ${Color.NFTea.Purple_Sugar_100};
+	color: ${Color.Purple_Sugar_100};
 `;
 
 const h1 = css`
 	${H_BASE_STYLE.styles}
-	font-family: ${FontFamily.HalvarBreitschrift};
+	font-family: ${font.family1};
 	font-size: 32px;
 	line-height: 40px;
 
@@ -92,9 +92,9 @@ const h4 = css`
 	}
 `;
 
-export const title: TitleStyle = {
-    h1,
-    h2,
-    h3,
-    h4,
-}
+export const title: TitleTheme = {
+	h1,
+	h2,
+	h3,
+	h4,
+};

@@ -111,5 +111,6 @@ export const global = css`
 
   * {
     box-sizing: border-box;
+    font-family: 'SF Pro Text', sans-serif;
   }
 `;

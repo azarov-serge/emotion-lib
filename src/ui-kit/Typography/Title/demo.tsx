@@ -1,7 +1,7 @@
 import React from 'react';
 import { Title } from './Title';
 
-export const DemoTitles: React.FC = () => {
+export const TitlesDemo: React.FC = () => {
   return (
     <>
       <Title align="left">h1.Title</Title>
