@@ -1,0 +1,25 @@
+export declare const Color: {
+    White: string;
+    Red_Tomato: string;
+    Red_Tomato_80: string;
+    Red_Tomato_10: string;
+    Red_Tomato_05: string;
+    Black_Oven: string;
+    Black_Oven_65: string;
+    Black_Oven_35: string;
+    Black_Oven_10: string;
+    Black_Oven_05: string;
+    Black_Oven_02: string;
+    Blue_Water: string;
+    Blue_Water_10: string;
+    Green_Salad: string;
+    Green_Salad_20: string;
+    Yellow_Mango: string;
+    Yellow_Mango_15: string;
+    Purple: string;
+    Purple_80: string;
+    Purple_85: string;
+    Purple_50: string;
+    Purple_10: string;
+    Purple_05: string;
+};
