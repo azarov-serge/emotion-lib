@@ -4,6 +4,7 @@ import { global } from './global';
 
 // Ui-Kit
 import { button } from './ui-kit/button';
+import { divider } from './ui-kit/divider';
 import { title } from './ui-kit/title';
 
 export const theme: UiKitTheme = {
@@ -11,5 +12,6 @@ export const theme: UiKitTheme = {
 	global,
 	// Ui-Kit
 	button,
+	divider,
 	title,
 };

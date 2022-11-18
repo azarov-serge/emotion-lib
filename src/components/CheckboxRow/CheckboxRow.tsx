@@ -5,9 +5,9 @@ import { defaultProps } from './CheckboxRow.defaultProps';
 import * as Styled from './styles';
 import { CheckboxRowProps } from './types';
 
-export const CheckBoxRow: React.FC<CheckboxRowProps> = (props) => {
+export const CheckboxRow: React.FC<CheckboxRowProps> = (props) => {
 	const {
-		priceTextProps = defaultProps.priceTextProps,
+		priceTextProps =  defaultProps.priceTextProps,
 		price,
 		checkBoxProps,
 		block,

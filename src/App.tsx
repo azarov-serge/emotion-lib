@@ -9,8 +9,12 @@ import { TitlesDemo } from './ui-kit/Typography/Title/demo';
 import { PriceTextsDemo } from './ui-kit/Typography/PriceText/demo';
 import { CheckboxDemo } from './ui-kit/Checkbox/demo';
 import { TabBarsDemo } from './ui-kit/TabBar/demo';
-import { CheckboxRowDemo } from './components/CheckBoxRow/demo';
+import { CheckboxRowDemo } from './components/CheckboxRow/demo';
 import { AmountsDemo } from './components/Amount/demo';
+import { DividersDemo } from './ui-kit/Divider/demo';
+import { DrawersDemo } from './ui-kit/Drawer/demo';
+import { SegmentPickerDemo } from './ui-kit/SegmentedPicker/demo';
+import { GridsDemo } from './ui-kit/Grid/demo';
 
 export const App = () => {
 	return (
@@ -51,6 +55,19 @@ export const App = () => {
 				<br />
 				<hr />
 
+				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+					<div style={{ width: '50%', margin: 15 }}>
+						<Title level={2}>Search Bar</Title>
+						{/* <DemoSearchBars /> */}
+					</div>
+					<div style={{ width: '50%', margin: 15 }}>
+						<Title level={2}>Dividers</Title>
+						{/* <DividersDemo /> */}
+					</div>
+				</div>
+				<br />
+				<hr />
+
 				<Title level={2}>Checkbox</Title>
 				<CheckboxDemo />
 				<hr />
@@ -70,6 +87,30 @@ export const App = () => {
 					</div>
 				</div>
 				<hr />
+
+				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+					<div style={{ width: '50%' }}>
+						<Title level={2}>Drawer</Title>
+						<DrawersDemo />
+					</div>
+					<div style={{ width: '40%' }}>
+						<Title level={2}>Modal</Title>
+						{/* <DemoModals /> */}
+					</div>
+				</div>
+				<br />
+				<br />
+				<hr />
+
+				<Title level={2}>Segment Picker</Title>
+				<SegmentPickerDemo />
+				<hr />
+
+				<Title level={2}>Grids (Row and Col)</Title>
+				<GridsDemo />
+
+				<br />
+				<br />
 			</div>
 		</UiKitProvider>
 	);

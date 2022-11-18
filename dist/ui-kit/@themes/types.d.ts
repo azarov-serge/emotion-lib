@@ -25,6 +25,23 @@ export interface CheckboxTheme {
     tick: CheckboxTickTheme;
     box: CheckboxElementTheme;
 }
+export interface DialogTheme {
+    default: SerializedStyles;
+    opened: SerializedStyles;
+}
+export interface OptionSegmentedPickerTheme {
+    label: SerializedStyles;
+    text: {
+        default: SerializedStyles;
+        checked: SerializedStyles;
+        disabled: SerializedStyles;
+    };
+    spinner: SerializedStyles;
+}
+export interface SegmentedPickerTheme {
+    option: OptionSegmentedPickerTheme;
+    default: SerializedStyles;
+}
 export interface TabBarTheme {
     wrapper: SerializedStyles;
     tab: SerializedStyles;
@@ -65,6 +82,10 @@ export interface UiKitTheme {
     global: SerializedStyles;
     button: ButtonTheme;
     checkbox: CheckboxTheme;
+    dialog: DialogTheme;
+    divider: SerializedStyles;
+    drawer: SerializedStyles;
+    segmentedPicker: SegmentedPickerTheme;
     tabBar: TabBarTheme;
     text: TextTheme;
     title: TitleTheme;

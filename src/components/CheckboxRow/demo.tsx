@@ -1,26 +1,26 @@
 import React from 'react';
-import { CheckBoxRow } from './CheckBoxRow';
+import { CheckboxRow } from './CheckboxRow';
 
 export const CheckboxRowDemo = () => {
 	return (
 		<div>
-			<CheckBoxRow mb={20} price={'0'} checkBoxProps={{ label: 'Label' }} />
-			<CheckBoxRow
+			<CheckboxRow mb={20} price={'0'} checkBoxProps={{ label: 'Label' }} />
+			<CheckboxRow
 				mb={20}
 				price={'0'}
 				checkBoxProps={{ label: 'Label', checked: true }}
 			/>
-			<CheckBoxRow
+			<CheckboxRow
 				mb={20}
 				price={'0'}
 				checkBoxProps={{ label: 'Label', disabled: true }}
 			/>
-			<CheckBoxRow
+			<CheckboxRow
 				mb={20}
 				price={'0'}
 				checkBoxProps={{ label: 'Label', checked: true, error: true }}
 			/>
-			<CheckBoxRow mb={20} checkBoxProps={{ label: 'Label' }} />
+			<CheckboxRow mb={20} checkBoxProps={{ label: 'Label' }} />
 		</div>
 	);
 };

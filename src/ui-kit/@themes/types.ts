@@ -36,6 +36,30 @@ export interface CheckboxTheme {
 }
 // #endregion
 
+// #region DialogTheme
+export interface DialogTheme {
+	default: SerializedStyles;
+	opened: SerializedStyles;
+}
+// #endregion
+
+// #region SegmentPickerTheme
+export interface OptionSegmentedPickerTheme {
+	label: SerializedStyles;
+	text: {
+		default: SerializedStyles;
+		checked: SerializedStyles;
+		disabled: SerializedStyles;
+	};
+	spinner: SerializedStyles;
+}
+
+export interface SegmentedPickerTheme {
+	option: OptionSegmentedPickerTheme;
+	default: SerializedStyles;
+}
+// #endregion
+
 // #region TabBarTheme
 export interface TabBarTheme {
 	wrapper: SerializedStyles;
@@ -71,8 +95,8 @@ export interface AmountTheme {
 	wrapper: {
 		disabled: SerializedStyles;
 	};
-	oldValue: SerializedStyles
-};
+	oldValue: SerializedStyles;
+}
 // #endregion
 
 // #region PriceTextTheme
@@ -97,11 +121,14 @@ export interface UiKitTheme {
 	// Ui-Kit
 	button: ButtonTheme;
 	checkbox: CheckboxTheme;
+	dialog: DialogTheme;
+	divider: SerializedStyles;
+	drawer: SerializedStyles;
+	segmentedPicker: SegmentedPickerTheme;
 	tabBar: TabBarTheme;
 	text: TextTheme;
 	title: TitleTheme;
 	priceText: PriceTextTheme;
-
 	// Components
 	amount: AmountTheme;
 	checkboxRow: CheckboxRowTheme;
