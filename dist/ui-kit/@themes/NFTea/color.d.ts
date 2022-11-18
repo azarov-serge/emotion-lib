@@ -10,4 +10,8 @@ export declare const Color: {
     readonly Purple_Sugar_65: "#906AD9";
     readonly Purple_Sugar_35: "#C3AFEB";
     readonly OrangeTea: "#E0705A";
+    readonly Red_Tomato: "#CA4836";
+    readonly Red_Tomato_80: "#D56D5E";
+    readonly Red_Tomato_10: "#FAEDEB";
+    readonly Red_Tomato_05: "#FCF6F5";
 };
