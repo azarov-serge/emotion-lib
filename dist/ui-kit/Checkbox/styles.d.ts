@@ -3,7 +3,7 @@ import { CheckboxProps } from './types';
 export declare const Wrapper: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;
-} & Required<Pick<CheckboxProps, "block" | "mb">>, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
+} & Required<Pick<CheckboxProps, "mb" | "block">>, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
 declare type LabelProps = Pick<CheckboxProps, 'checked' | 'disabled' | 'error'>;
 export declare const Label: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
