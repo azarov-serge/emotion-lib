@@ -31,7 +31,7 @@ const h1 = css`
 `;
 
 const h2 = css`
-	${H_BASE_STYLE};
+	${H_BASE_STYLE.styles};
 	font-size: 17px;
 	line-height: 22px;
 
@@ -52,7 +52,7 @@ const h2 = css`
 
 // Неопределен
 const h3 = css`
-	${H_BASE_STYLE};
+	${H_BASE_STYLE.styles};
 	font-size: 17px;
 	line-height: 22px;
 
@@ -73,7 +73,7 @@ const h3 = css`
 
 // Неопределен
 const h4 = css`
-	${H_BASE_STYLE};
+	${H_BASE_STYLE.styles};
 	font-size: 17px;
 	line-height: 22px;
 

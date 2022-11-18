@@ -1,5 +1,18 @@
 import { SerializedStyles } from '@emotion/react';
+import { ButtonSize, ButtonType } from '../Button';
 import { PriceTextSize, TextSize } from '../Typography';
+
+// #region ButtonTheme
+export type ButtonTypeTheme = Record<ButtonType, SerializedStyles> & {
+	loading: Record<ButtonType, SerializedStyles>;
+	default: SerializedStyles;
+	disabled: SerializedStyles;
+};
+
+export type ButtonTheme = Record<ButtonSize, ButtonTypeTheme> & {
+	spin: Record<ButtonType, SerializedStyles>;
+};
+// #endregion
 
 // #region TabBarTheme
 export interface TabBarTheme {
@@ -32,6 +45,7 @@ export type PriceTextTheme = Record<PriceTextSize, SerializedStyles>;
 export interface UiKitTheme {
 	global: SerializedStyles;
 	// Ui-Kit
+	button: ButtonTheme;
 	tabBar: TabBarTheme;
 	text: TextTheme;
 	title: TitleTheme;

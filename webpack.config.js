@@ -31,6 +31,19 @@ module.exports = (env, argv) => {
 		module: {
 			rules: [
 				{
+					test: /\.(ttf|otf)$/i,
+					use: [
+						{
+							loader: 'url-loader',
+							options: {
+								limit: false,
+								name: '[name].[ext]',
+								outputPath: 'fonts',
+							},
+						},
+					],
+				},
+				{
 					test: /\.css$/,
 					use: ['style-loader', 'css-loader'],
 				},
@@ -42,20 +55,26 @@ module.exports = (env, argv) => {
 				{
 					test: /\.svg$/,
 					loader: require.resolve('@svgr/webpack'),
+					options: {
+						svgoConfig: {
+							plugins: [
+								{
+									name: 'removeViewBox',
+									active: false,
+								},
+							],
+						},
+					},
 				},
 				{
 					test: /\.(png|jpe?g|gif)$/i,
 					use: [
 						{
 							loader: 'file-loader',
-						},
-					],
-				},
-				{
-					test: /\.(ttf|otf)$/i,
-					use: [
-						{
-							loader: 'file-loader',
+							options: {
+								name: '[name].[ext]',
+								outputPath: 'images',
+							},
 						},
 					],
 				},

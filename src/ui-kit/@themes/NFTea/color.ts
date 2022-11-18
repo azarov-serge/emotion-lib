@@ -12,4 +12,9 @@ export const Color = {
   Purple_Sugar_35:'#C3AFEB',
 
   OrangeTea: '#E0705A',
+
+  Red_Tomato: '#CA4836',
+	Red_Tomato_80: '#D56D5E',
+	Red_Tomato_10: '#FAEDEB',
+	Red_Tomato_05: '#FCF6F5',
 } as const;

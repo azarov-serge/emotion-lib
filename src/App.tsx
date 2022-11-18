@@ -2,6 +2,7 @@ import { ThemeProvider } from '@emotion/react';
 import React from 'react';
 import { Title, GlobalStyle } from './ui-kit';
 import { uiKitTheme } from './ui-kit/@themes';
+import { ButtonsDemo } from './ui-kit/Button/demo';
 import { IconsDemo } from './ui-kit/Icon/demo';
 import { TextsDemo } from './ui-kit/Typography/Text/demo';
 import { TitlesDemo } from './ui-kit/Typography/Title/demo';
@@ -10,8 +11,12 @@ import { TabBarsDemo } from './ui-kit/TabBar/demo';
 
 export const App = () => {
 	return (
-		<ThemeProvider theme={uiKitTheme.foodCity}>
+		<ThemeProvider theme={uiKitTheme.NFTea}>
 			<div style={{ padding: 25 }}>
+				<Title level={2}>Кнопки</Title>
+				<ButtonsDemo />
+				<hr />
+
 				<Title level={2}>Иконки</Title>
 				<IconsDemo />
 				<hr />

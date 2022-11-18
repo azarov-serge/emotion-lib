@@ -1,36 +1,42 @@
 import { css } from '@emotion/react';
 
+import HalvarBreitschriftThin from '../../../assets/fonts/Halvar/HalvarBreitschriftThin.ttf';
+import HalvarBreitschriftRegular from '../../../assets/fonts/Halvar/HalvarBreitschriftRegular.ttf';
+import HalvarBreitschriftBold from '../../../assets/fonts/Halvar/HalvarBreitschriftBold.ttf';
+import HalvarMittelschriftRegular from '../../../assets/fonts/Halvar/HalvarMittelschriftRegular.ttf';
+import HalvarMittelschriftBold from '../../../assets/fonts/Halvar/HalvarMittelschriftBold.ttf';
+
 export const global = css`
   /* FONTS */
 
   @font-face {
     font-family: 'Halvar Breitschrift';
-    src: url('/fonts/Halvar/Halvar Breitschrift Thin.ttf') format('truetype');
+    src: url('${HalvarBreitschriftThin}') format('truetype');
     font-weight: 300;
   }
 
   @font-face {
     font-family: 'Halvar Breitschrift';
-    src: url('/fonts/Halvar/Halvar Breitschrift Regular.ttf') format('truetype');
+    src: url('${HalvarBreitschriftRegular}') format('truetype');
     font-weight: 400;
   }
 
   @font-face {
     font-family: 'Halvar Breitschrift';
-    src: url('/fonts/Halvar/Halvar Breitschrift Bold.ttf') format('truetype');
+    src: url('${HalvarBreitschriftBold}') format('truetype');
     font-weight: 700;
   }
 
   @font-face {
     font-family: 'Halvar Mittelschrift';
-    src: url('/fonts/Halvar/Halvar Mittelschrift Regular.ttf')
+    src: url('${HalvarMittelschriftRegular}')
       format('truetype');
     font-weight: 400;
   }
 
   @font-face {
     font-family: 'Halvar Mittelschrift';
-    src: url('/fonts/Halvar/Halvar Mittelschrift Bold.ttf') format('truetype');
+    src: url('${HalvarMittelschriftBold}') format('truetype');
     font-weight: 700;
   }
 
