@@ -1,2 +1,2 @@
-import { type TitleProps } from './types';
-export declare const defaultProps: TitleProps;
+import { TitleProps } from './types';
+export declare const defaultProps: Required<Pick<TitleProps, 'level' | 'align' | 'children'>>;

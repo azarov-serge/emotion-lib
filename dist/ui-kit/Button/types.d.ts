@@ -1,7 +1,7 @@
 import { ReactNode, DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 import { IconProps, IconName } from '../Icon';
 import { ComponentSize } from '../@types';
-export declare enum ButtonType {
+export declare enum ButtonKind {
     primary = "primary",
     secondary = "secondary",
     ghost = "ghost",
@@ -10,7 +10,7 @@ export declare enum ButtonType {
 export declare type ButtonSize = Extract<keyof typeof ComponentSize, 'small' | 'middle'>;
 export interface ButtonProps extends Omit<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, 'type'> {
     /** тип кнопки */
-    type?: keyof typeof ButtonType;
+    kind?: keyof typeof ButtonKind;
     /** размер кнопки */
     size?: ButtonSize;
     /** обработчик события клика */
