@@ -11,21 +11,19 @@ export const Button: React.FC<ButtonProps> = (props) => {
     size = defaultProps.size,
     icon,
     iconProps,
-    type = defaultProps.type,
+    kind = defaultProps.kind,
     ...rest
   } = props;
 
   return (
     <Styled.Button
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      type={type}
+      kind={kind}
       size={size}
       isLoading={loading}
       onClick={onClick}
       {...rest}
     >
-      <Styled.Spin size={size} isLoading={loading} type={type} icon={icon}>
+      <Styled.Spin size={size} isLoading={loading} kind={kind} icon={icon}>
         <span />
       </Styled.Spin>
       {!loading && icon && <Styled.ButtonIcon name={icon} {...iconProps } />}

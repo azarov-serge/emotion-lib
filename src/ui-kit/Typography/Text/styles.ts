@@ -19,7 +19,7 @@ export const Text = styled.span<TextProps>((props) => {
 
   return css`
     display: ${block ? 'block' : 'inline'};
-    ${text[size!].styles}
+    ${text[size].styles}
     font-weight: ${strong ? '700' : '500'};
 
     text-align: ${align};

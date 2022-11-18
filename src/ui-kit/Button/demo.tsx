@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from 'react';
+import React, { CSSProperties, useState } from 'react';
 import { Title } from '../Typography';
 import { Button } from './Button';
 
@@ -16,11 +16,11 @@ export const ButtonsDemo = () => {
 			<div style={{ paddingTop: 0, display: 'flex' }}>
 				<div style={{ width: 340, marginRight: 10 }}>
 					<Title level={3}>primary</Title>
-					<Button type="primary" block mb={30} icon="approveTick">
+					<Button kind="primary" block mb={30} icon="approveTick">
 						Primary
 					</Button>
 					<Button
-						type="primary"
+						kind="primary"
 						block
 						loading={spin}
 						icon="approveTick"
@@ -29,17 +29,17 @@ export const ButtonsDemo = () => {
 					>
 						Primary
 					</Button>
-					<Button type="primary" block disabled mb={30}>
+					<Button kind="primary" block disabled mb={30}>
 						Primary
 					</Button>
 				</div>
 				<div style={{ width: 340, marginRight: 10 }}>
 					<Title level={3}>secondary</Title>
-					<Button type="secondary" icon="approveTick" block mb={30}>
+					<Button kind="secondary" icon="approveTick" block mb={30}>
 						Action
 					</Button>
 					<Button
-						type="secondary"
+						kind="secondary"
 						block
 						loading={spin}
 						icon="approveTick"
@@ -48,17 +48,17 @@ export const ButtonsDemo = () => {
 					>
 						Action
 					</Button>
-					<Button type="secondary" block disabled mb={30}>
+					<Button kind="secondary" block disabled mb={30}>
 						Action
 					</Button>
 				</div>
 				<div style={{ width: 340, marginRight: 10 }}>
 					<Title level={3}>ghost</Title>
-					<Button type="ghost" icon="approveTick" block mb={30}>
+					<Button kind="ghost" icon="approveTick" block mb={30}>
 						Action
 					</Button>
 					<Button
-						type="ghost"
+						kind="ghost"
 						block
 						loading={spin}
 						icon="approveTick"
@@ -67,17 +67,17 @@ export const ButtonsDemo = () => {
 					>
 						Action
 					</Button>
-					<Button type="ghost" block disabled mb={30}>
+					<Button kind="ghost" block disabled mb={30}>
 						Action
 					</Button>
 				</div>
 				<div style={{ width: 340, marginRight: 10 }}>
 					<Title level={3}>danger</Title>
-					<Button type="danger" icon="approveTick" block mb={30}>
+					<Button kind="danger" icon="approveTick" block mb={30}>
 						Action
 					</Button>
 					<Button
-						type="danger"
+						kind="danger"
 						block
 						loading={spin}
 						icon="approveTick"
@@ -86,7 +86,7 @@ export const ButtonsDemo = () => {
 					>
 						Action
 					</Button>
-					<Button type="danger" block disabled mb={30}>
+					<Button kind="danger" block disabled mb={30}>
 						Action
 					</Button>
 				</div>
@@ -96,7 +96,7 @@ export const ButtonsDemo = () => {
 				<div style={{ display: 'flex' }}>
 					<div>
 						<Button
-							type="primary"
+							kind="primary"
 							icon="approveTick"
 							size="small"
 							mb={30}
@@ -105,7 +105,7 @@ export const ButtonsDemo = () => {
 							Primary
 						</Button>
 						<Button
-							type="primary"
+							kind="primary"
 							size="small"
 							icon="approveTick"
 							loading={spin}
@@ -117,7 +117,7 @@ export const ButtonsDemo = () => {
 							Primary
 						</Button>
 						<Button
-							type="primary"
+							kind="primary"
 							size="small"
 							disabled
 							mb={30}
@@ -129,7 +129,7 @@ export const ButtonsDemo = () => {
 
 					<div>
 						<Button
-							type="secondary"
+							kind="secondary"
 							icon="approveTick"
 							size="small"
 							mb={30}
@@ -139,7 +139,7 @@ export const ButtonsDemo = () => {
 						</Button>
 
 						<Button
-							type="secondary"
+							kind="secondary"
 							size="small"
 							icon="approveTick"
 							loading={spin}
@@ -152,7 +152,7 @@ export const ButtonsDemo = () => {
 						</Button>
 
 						<Button
-							type="secondary"
+							kind="secondary"
 							size="small"
 							disabled
 							block
@@ -166,7 +166,7 @@ export const ButtonsDemo = () => {
 
 					<div>
 						<Button
-							type="ghost"
+							kind="ghost"
 							icon="approveTick"
 							size="small"
 							mb={30}
@@ -175,7 +175,7 @@ export const ButtonsDemo = () => {
 							Ghost
 						</Button>
 						<Button
-							type="ghost"
+							kind="ghost"
 							size="small"
 							icon="approveTick"
 							loading={spin}
@@ -187,7 +187,7 @@ export const ButtonsDemo = () => {
 							Ghost
 						</Button>
 						<Button
-							type="ghost"
+							kind="ghost"
 							size="small"
 							disabled
 							mb={30}
@@ -199,7 +199,7 @@ export const ButtonsDemo = () => {
 
 					<div>
 						<Button
-							type="danger"
+							kind="danger"
 							icon="approveTick"
 							size="small"
 							mb={30}
@@ -209,7 +209,7 @@ export const ButtonsDemo = () => {
 						</Button>
 
 						<Button
-							type="danger"
+							kind="danger"
 							size="small"
 							icon="approveTick"
 							loading={spin}
@@ -222,7 +222,7 @@ export const ButtonsDemo = () => {
 						</Button>
 
 						<Button
-							type="danger"
+							kind="danger"
 							disabled
 							size="small"
 							mb={30}

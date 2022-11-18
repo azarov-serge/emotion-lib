@@ -3,17 +3,24 @@ import { global } from './global';
 
 // Ui-Kit
 import { button } from './ui-kit/button';
+import { checkbox } from './ui-kit/checkbox';
 import { priceText } from './ui-kit/priceText';
 import { text } from './ui-kit/text';
 import { title } from './ui-kit/title';
 import { tabBar } from './ui-kit/tabBar';
 
+// Components
+import { checkboxRow } from './components/checkboxRow';
+
 export const theme: UiKitTheme = {
 	global,
 	// Ui-Kit
 	button,
+	checkbox,
 	priceText,
 	text,
 	title,
 	tabBar,
+	// Components
+	checkboxRow,
 };

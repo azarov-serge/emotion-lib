@@ -19,7 +19,7 @@ export const PriceText = styled.span<PriceTextProps>((props) => {
 
   return css`
     display: ${block ? 'block' : 'inline'};
-    ${priceText[size!].styles}
+    ${priceText[size].styles}
     text-align: ${align};
     ${underline && 'text-decoration: underline'}
     ${deleted && 'text-decoration: line-through'}

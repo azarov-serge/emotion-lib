@@ -1,10 +1,10 @@
-import { ButtonProps, ButtonType } from './types';
+import { ButtonProps } from './types';
 import { ComponentSize } from '../@types';
 
 export const defaultProps: Required<
-	Pick<ButtonProps, 'type' | 'size' | 'disabled' | 'block' | 'loading' | 'mb'>
+	Pick<ButtonProps, 'kind' | 'size' | 'disabled' | 'block' | 'loading' | 'mb'>
 > = {
-	type: 'primary',
+	kind: 'primary',
 	size: ComponentSize.middle,
 	disabled: false,
 	block: false,

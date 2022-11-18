@@ -2,7 +2,7 @@ import { ReactNode, DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 import { IconProps, IconName } from '../Icon';
 import { ComponentSize } from '../@types';
 
-export enum ButtonType {
+export enum ButtonKind {
   primary = 'primary',
   secondary = 'secondary',
   ghost = 'ghost',
@@ -20,7 +20,7 @@ export interface ButtonProps
     'type'
   > {
   /** тип кнопки */
-  type?: keyof typeof ButtonType;
+  kind?: keyof typeof ButtonKind;
 
   /** размер кнопки */
   size?: ButtonSize;

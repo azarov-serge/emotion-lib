@@ -15,7 +15,7 @@ export const Button = styled.button<Omit<StyledButtonProps, 'loading'> & { isLoa
 	const {
 		size,
 		isLoading,
-		type = defaultProps.type,
+		kind = defaultProps.kind,
 		disabled = defaultProps.disabled,
 		block = defaultProps.block,
 		mb = defaultProps.mb,
@@ -27,8 +27,8 @@ export const Button = styled.button<Omit<StyledButtonProps, 'loading'> & { isLoa
 	const sizeStyles = button[size!];
 
 	const defaultStyles = sizeStyles.default;
-	const typeStyles = sizeStyles[type];
-	const loadingStyle = sizeStyles.loading[type];
+	const typeStyles = sizeStyles[kind];
+	const loadingStyle = sizeStyles.loading[kind];
 	const disabledStyle = sizeStyles.disabled;
 
 	const marginRight = size === ComponentSize.small ? 4 : 8;
@@ -81,12 +81,12 @@ export const ButtonIcon = styled(Icon)<Pick<StyledButtonProps, 'size'>>(
 	}
 );
 
-type SpinProps = Pick<ButtonProps, 'size' | 'type' | 'icon'> & {
+type SpinProps = Pick<ButtonProps, 'size' | 'kind' | 'icon'> & {
 	isLoading?: boolean;
 };
 
 export const Spin = styled.span<SpinProps>((props) => {
-	const { isLoading, size, type = defaultProps.type, theme } = props;
+	const { isLoading, size, kind = defaultProps.kind, theme } = props;
 	const { spin } = (theme as UiKitTheme).button;
 
 	if (!isLoading) {
@@ -120,7 +120,7 @@ export const Spin = styled.span<SpinProps>((props) => {
 
 			border-radius: 50%;
 			background-color: transparent;
-			${spin[type].styles}
+			${spin[kind].styles}
 		}
 	`;
 });

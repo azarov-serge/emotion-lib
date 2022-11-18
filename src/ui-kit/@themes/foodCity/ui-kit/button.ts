@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { ButtonTheme, ButtonTypeTheme } from '../../types';
+import { ButtonTheme, ButtonKindTheme } from '../../types';
 import { Color } from '../color';
 
 const middleLoading = {
@@ -109,7 +109,7 @@ const middleDefault = css`
 	line-height: 24px;
 `;
 
-const middle: ButtonTypeTheme = {
+const middle: ButtonKindTheme = {
 	loading: middleLoading,
 	default: middleDefault,
 	disabled: middleDisabled,
@@ -196,7 +196,7 @@ const smallGhost = css`
 	}
 `;
 
-const small: ButtonTypeTheme = {
+const small: ButtonKindTheme = {
 	loading: smallLoading,
 	default: smallDefault,
 	disabled: smallDisabled,
