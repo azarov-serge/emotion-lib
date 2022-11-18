@@ -1,3 +1,4 @@
+export * from './Button';
 export * from './Icon';
 export * from './TabBar';
 export * from './Typography';
