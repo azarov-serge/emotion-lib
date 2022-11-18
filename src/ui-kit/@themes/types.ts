@@ -67,6 +67,15 @@ export type PriceTextTheme = Record<PriceTextSize, SerializedStyles>;
 
 // Components
 // #region PriceTextTheme
+export interface AmountTheme {
+	wrapper: {
+		disabled: SerializedStyles;
+	};
+	oldValue: SerializedStyles
+};
+// #endregion
+
+// #region PriceTextTheme
 export interface RowCheckboxRowTheme {
 	default: SerializedStyles;
 	disabled: SerializedStyles;
@@ -94,5 +103,6 @@ export interface UiKitTheme {
 	priceText: PriceTextTheme;
 
 	// Components
+	amount: AmountTheme;
 	checkboxRow: CheckboxRowTheme;
 }

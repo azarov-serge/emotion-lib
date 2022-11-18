@@ -42,6 +42,12 @@ export interface TitleTheme {
 }
 export declare type TextTheme = Record<TextSize, SerializedStyles>;
 export declare type PriceTextTheme = Record<PriceTextSize, SerializedStyles>;
+export interface AmountTheme {
+    wrapper: {
+        disabled: SerializedStyles;
+    };
+    oldValue: SerializedStyles;
+}
 export interface RowCheckboxRowTheme {
     default: SerializedStyles;
     disabled: SerializedStyles;
@@ -63,5 +69,6 @@ export interface UiKitTheme {
     text: TextTheme;
     title: TitleTheme;
     priceText: PriceTextTheme;
+    amount: AmountTheme;
     checkboxRow: CheckboxRowTheme;
 }

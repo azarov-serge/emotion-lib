@@ -10,11 +10,13 @@ import { title } from './ui-kit/title';
 import { tabBar } from './ui-kit/tabBar';
 
 // Components
+import { amount } from './components/amount';
 import { checkboxRow } from './components/checkboxRow';
 
 export const theme: UiKitTheme = {
 	global,
 	// Ui-Kit
+	amount,
 	button,
 	checkbox,
 	priceText,

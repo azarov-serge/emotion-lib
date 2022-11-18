@@ -1,6 +1,6 @@
-import { ThemeProvider } from '@emotion/react';
 import React from 'react';
-import { Title, GlobalStyle } from './ui-kit';
+import { UiKitProvider } from './providers/UiKitProvider';
+import { Title } from './ui-kit';
 import { uiKitTheme } from './ui-kit/@themes';
 import { ButtonsDemo } from './ui-kit/Button/demo';
 import { IconsDemo } from './ui-kit/Icon/demo';
@@ -10,10 +10,11 @@ import { PriceTextsDemo } from './ui-kit/Typography/PriceText/demo';
 import { CheckboxDemo } from './ui-kit/Checkbox/demo';
 import { TabBarsDemo } from './ui-kit/TabBar/demo';
 import { CheckboxRowDemo } from './components/CheckBoxRow/demo';
+import { AmountsDemo } from './components/Amount/demo';
 
 export const App = () => {
 	return (
-		<ThemeProvider theme={uiKitTheme.foodCity}>
+		<UiKitProvider theme={uiKitTheme.foodCity}>
 			<div style={{ padding: 25 }}>
 				<Title level={2}>Кнопки</Title>
 				<ButtonsDemo />
@@ -45,6 +46,11 @@ export const App = () => {
 				</div>
 				<hr />
 
+				<Title level={2}>Amount</Title>
+				<AmountsDemo />
+				<br />
+				<hr />
+
 				<Title level={2}>Checkbox</Title>
 				<CheckboxDemo />
 				<hr />
@@ -65,7 +71,6 @@ export const App = () => {
 				</div>
 				<hr />
 			</div>
-			<GlobalStyle />
-		</ThemeProvider>
+		</UiKitProvider>
 	);
 };
