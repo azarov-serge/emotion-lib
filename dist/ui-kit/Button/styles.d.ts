@@ -15,6 +15,6 @@ export declare const ButtonIcon: import("@emotion/styled").StyledComponent<impor
 export declare const Spin: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;
-} & Pick<ButtonProps, "size" | "icon" | "kind"> & {
+} & Pick<ButtonProps, "kind" | "size" | "icon"> & {
     isLoading?: boolean | undefined;
 }, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {}>;

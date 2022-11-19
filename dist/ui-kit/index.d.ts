@@ -5,6 +5,7 @@ export * from './Drawer';
 export * from './Grid';
 export * from './Icon';
 export * from './Input';
+export * from './Modal';
 export * from './SegmentedPicker';
 export * from './TabBar';
 export * from './Typography';
