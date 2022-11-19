@@ -1,4 +1,5 @@
 import { SerializedStyles } from '@emotion/react';
+import { InputState } from 'ui-kit/base/InputBase/constants';
 import { ButtonSize, ButtonKind } from '../Button';
 import { PriceTextSize, TextSize } from '../Typography';
 
@@ -40,6 +41,31 @@ export interface CheckboxTheme {
 export interface DialogTheme {
 	default: SerializedStyles;
 	opened: SerializedStyles;
+}
+// #endregion
+
+// #region InputBaseTheme
+export type ElementInputBaseTheme = Record<InputState, SerializedStyles>;
+export interface InputBaseTheme {
+	label: SerializedStyles;
+	message: ElementInputBaseTheme;
+	input: ElementInputBaseTheme;
+}
+// #endregion
+
+// #region InputTheme
+export interface InputTheme {
+	button: {
+		default: SerializedStyles;
+		disabled: SerializedStyles;
+	};
+}
+// #endregion
+
+// #region ModalTheme
+export interface ModalTheme {
+	wrapper: SerializedStyles;
+	closeButton: SerializedStyles;
 }
 // #endregion
 
@@ -90,7 +116,7 @@ export type PriceTextTheme = Record<PriceTextSize, SerializedStyles>;
 // #endregion
 
 // Components
-// #region PriceTextTheme
+// #region AmountTheme
 export interface AmountTheme {
 	wrapper: {
 		disabled: SerializedStyles;
@@ -99,7 +125,7 @@ export interface AmountTheme {
 }
 // #endregion
 
-// #region PriceTextTheme
+// #region CheckboxRowTheme
 export interface RowCheckboxRowTheme {
 	default: SerializedStyles;
 	disabled: SerializedStyles;
@@ -116,6 +142,32 @@ export interface CheckboxRowTheme {
 }
 // #endregion
 
+// #region NavBarTheme
+export interface NavBarTheme {
+	centerButton: SerializedStyles;
+	caption: SerializedStyles;
+	iconWrapper: SerializedStyles;
+	title: SerializedStyles;
+}
+// #region
+
+// #region TitleRowTheme
+export interface TitleRowTheme {
+	row: SerializedStyles;
+	title: SerializedStyles;
+}
+// #endregion
+
+// #region TitleRowTheme
+export interface TextRowTheme {
+	row: {
+		default: SerializedStyles;
+		disabled: SerializedStyles;
+	};
+	description: SerializedStyles;
+}
+// #endregion
+
 export interface UiKitTheme {
 	global: SerializedStyles;
 	// Ui-Kit
@@ -124,6 +176,9 @@ export interface UiKitTheme {
 	dialog: DialogTheme;
 	divider: SerializedStyles;
 	drawer: SerializedStyles;
+	inputBase: InputBaseTheme;
+	input: InputTheme;
+	modal: ModalTheme;
 	segmentedPicker: SegmentedPickerTheme;
 	tabBar: TabBarTheme;
 	text: TextTheme;
@@ -132,4 +187,8 @@ export interface UiKitTheme {
 	// Components
 	amount: AmountTheme;
 	checkboxRow: CheckboxRowTheme;
+	navBar: NavBarTheme;
+	spinner: SerializedStyles;
+	titleRow: TitleRowTheme;
+	textRow: TextRowTheme;
 }

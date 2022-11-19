@@ -15,6 +15,12 @@ import { DividersDemo } from './ui-kit/Divider/demo';
 import { DrawersDemo } from './ui-kit/Drawer/demo';
 import { SegmentPickerDemo } from './ui-kit/SegmentedPicker/demo';
 import { GridsDemo } from './ui-kit/Grid/demo';
+import { InputsDemo } from './ui-kit/Input/demo';
+import { SearchBarsDemo } from './components/SearchBar/demo';
+import { TitleRowsDemo } from './components/TitleRow/demo';
+import { TextRowsDemo } from './components/TextRow/demo';
+import { ModalsDemo } from './ui-kit/Modal/demo';
+import { NavBarsDemo } from './components/NavBar/demo';
 
 export const App = () => {
 	return (
@@ -58,11 +64,11 @@ export const App = () => {
 				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 					<div style={{ width: '50%', margin: 15 }}>
 						<Title level={2}>Search Bar</Title>
-						{/* <DemoSearchBars /> */}
+						<SearchBarsDemo />
 					</div>
 					<div style={{ width: '50%', margin: 15 }}>
 						<Title level={2}>Dividers</Title>
-						{/* <DividersDemo /> */}
+						<DividersDemo />
 					</div>
 				</div>
 				<br />
@@ -95,7 +101,7 @@ export const App = () => {
 					</div>
 					<div style={{ width: '40%' }}>
 						<Title level={2}>Modal</Title>
-						{/* <DemoModals /> */}
+						<ModalsDemo />
 					</div>
 				</div>
 				<br />
@@ -111,6 +117,33 @@ export const App = () => {
 
 				<br />
 				<br />
+				<hr />
+
+				<Title level={2}>Input</Title>
+				<InputsDemo />
+				<br />
+				<hr />
+
+				<Title level={2}>Title Row</Title>
+				<TitleRowsDemo />
+				<hr />
+
+				<div style={{ display: 'flex' }}>
+					<div style={{ width: '45%' }}>
+						<Title level={2}>Switcher Row</Title>
+						{/* <SwitcherRowsDemo /> */}
+					</div>
+					<div style={{ width: '45%' }}>
+						<Title level={2}>Text Row</Title>
+						<TextRowsDemo />
+					</div>
+				</div>
+				<hr />
+
+				<NavBarsDemo />
+
+				<br />
+				<hr />
 			</div>
 		</UiKitProvider>
 	);
