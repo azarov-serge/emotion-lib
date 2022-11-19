@@ -1,4 +1,5 @@
 import { SerializedStyles } from '@emotion/react';
+import { InputState } from 'ui-kit/base/InputBase/constants';
 import { ButtonSize, ButtonKind } from '../Button';
 import { PriceTextSize, TextSize } from '../Typography';
 export declare type ButtonKindTheme = Record<ButtonKind, SerializedStyles> & {
@@ -28,6 +29,22 @@ export interface CheckboxTheme {
 export interface DialogTheme {
     default: SerializedStyles;
     opened: SerializedStyles;
+}
+export declare type ElementInputBaseTheme = Record<InputState, SerializedStyles>;
+export interface InputBaseTheme {
+    label: SerializedStyles;
+    message: ElementInputBaseTheme;
+    input: ElementInputBaseTheme;
+}
+export interface InputTheme {
+    button: {
+        default: SerializedStyles;
+        disabled: SerializedStyles;
+    };
+}
+export interface ModalTheme {
+    wrapper: SerializedStyles;
+    closeButton: SerializedStyles;
 }
 export interface OptionSegmentedPickerTheme {
     label: SerializedStyles;
@@ -78,6 +95,23 @@ export interface CheckboxRowTheme {
     row: RowCheckboxRowTheme;
     price: PriceCheckboxRowTheme;
 }
+export interface NavBarTheme {
+    centerButton: SerializedStyles;
+    caption: SerializedStyles;
+    iconWrapper: SerializedStyles;
+    title: SerializedStyles;
+}
+export interface TitleRowTheme {
+    row: SerializedStyles;
+    title: SerializedStyles;
+}
+export interface TextRowTheme {
+    row: {
+        default: SerializedStyles;
+        disabled: SerializedStyles;
+    };
+    description: SerializedStyles;
+}
 export interface UiKitTheme {
     global: SerializedStyles;
     button: ButtonTheme;
@@ -85,6 +119,9 @@ export interface UiKitTheme {
     dialog: DialogTheme;
     divider: SerializedStyles;
     drawer: SerializedStyles;
+    inputBase: InputBaseTheme;
+    input: InputTheme;
+    modal: ModalTheme;
     segmentedPicker: SegmentedPickerTheme;
     tabBar: TabBarTheme;
     text: TextTheme;
@@ -92,4 +129,8 @@ export interface UiKitTheme {
     priceText: PriceTextTheme;
     amount: AmountTheme;
     checkboxRow: CheckboxRowTheme;
+    navBar: NavBarTheme;
+    spinner: SerializedStyles;
+    titleRow: TitleRowTheme;
+    textRow: TextRowTheme;
 }
