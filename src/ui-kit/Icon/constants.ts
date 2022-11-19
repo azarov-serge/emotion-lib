@@ -16,12 +16,15 @@ import CheckGreen from '../../assets/icons/colored/CheckGreen.svg';
 import CloseRed from '../../assets/icons/colored/CloseRed.svg';
 import WarningYellow from '../../assets/icons/colored/WarningYellow.svg';
 
-import Sushi from '../../assets/icons/emoji/Sushi.png';
-import Pizza from '../../assets/icons/emoji/Pizza.png';
-import HotBeverage from '../../assets/icons/emoji/HotBeverage.png';
-import Hamburger from '../../assets/icons/emoji/Hamburger.png';
-import GreenApple from '../../assets/icons/emoji/GreenApple.png';
-import FrenchFries from '../../assets/icons/emoji/FrenchFries.png';
+// import Sushi from '../../assets/icons/emoji/Sushi.png';
+// import Pizza from '../../assets/icons/emoji/Pizza.png';
+// import HotBeverage from '../../assets/icons/emoji/HotBeverage.png';
+// import Hamburger from '../../assets/icons/emoji/Hamburger.png';
+// import GreenApple from '../../assets/icons/emoji/GreenApple.png';
+// import FrenchFries from '../../assets/icons/emoji/FrenchFries.png';
+// @ts-ignore
+import pckg from '../../../package.json';
+const url = pckg.url + "/icons/emoji";
 
 export const iconsMap = {
   flat: {
@@ -43,12 +46,20 @@ export const iconsMap = {
     [IconNameEnum.warningYellow]: WarningYellow,
   },
 
+  // emoji: {
+  //   [IconNameEnum.sushi]: Sushi,
+  //   [IconNameEnum.pizza]: Pizza,
+  //   [IconNameEnum.hotBeverage]: HotBeverage,
+  //   [IconNameEnum.hamburger]: Hamburger,
+  //   [IconNameEnum.greenApple]: GreenApple,
+  //   [IconNameEnum.frenchFries]: FrenchFries,
+  // },
   emoji: {
-    [IconNameEnum.sushi]: Sushi,
-    [IconNameEnum.pizza]: Pizza,
-    [IconNameEnum.hotBeverage]: HotBeverage,
-    [IconNameEnum.hamburger]: Hamburger,
-    [IconNameEnum.greenApple]: GreenApple,
-    [IconNameEnum.frenchFries]: FrenchFries,
+    [IconNameEnum.sushi]: url + '/Sushi.png',
+    [IconNameEnum.pizza]: url + '/Pizza.png',
+    [IconNameEnum.hotBeverage]: url + '/HotBeverage.png',
+    [IconNameEnum.hamburger]: url + '/Hamburger.png',
+    [IconNameEnum.greenApple]: url + '/GreenApple.png',
+    [IconNameEnum.frenchFries]: url + '/FrenchFries.png',
   },
 };
