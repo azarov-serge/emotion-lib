@@ -1,9 +1,9 @@
 import React  from 'react';
 import * as Styled from './styles';
-import { RowProps } from './types';
-import { defaultProps } from './Row.defaultProps';
+import { BaseRowProps } from './types';
+import { defaultProps } from './BaseRow.defaultProps';
 
-export const Row: React.FC<RowProps> = (props) => {
+export const BaseRow: React.FC<BaseRowProps> = (props) => {
 	const {
 		mb = defaultProps.mb,
 		className,

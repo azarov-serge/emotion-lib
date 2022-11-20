@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import { TextRowProps } from './types';
 declare type RowProps = Pick<TextRowProps, 'disabled'>;
-export declare const Row: import("@emotion/styled").StyledComponent<import("../../ui-kit/base").RowProps & {
+export declare const Row: import("@emotion/styled").StyledComponent<import("../../ui-kit/base").BaseRowProps & {
     theme?: import("@emotion/react").Theme | undefined;
 } & RowProps, {}, {}>;
 export declare const Header: import("@emotion/styled").StyledComponent<{

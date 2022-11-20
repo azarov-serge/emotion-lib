@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { Row as BaseRow } from '../../ui-kit/base';
+import { BaseRow } from '../../ui-kit/base';
 import { Title as BaseTitle } from '../../ui-kit';
 import { TitleRowProps } from './types';
 import { UiKitTheme } from '../../ui-kit/@themes';

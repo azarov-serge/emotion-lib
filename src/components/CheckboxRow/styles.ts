@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Row as BaseRow } from '../../ui-kit/base/Row';
+import { BaseRow } from '../../ui-kit/base/BaseRow';
 import { CheckboxProps } from '../../ui-kit/Checkbox';
 import { UiKitTheme } from '../../ui-kit/@themes';
 

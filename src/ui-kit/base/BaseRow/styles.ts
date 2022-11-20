@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { RowProps } from './types';
+import { BaseRowProps } from './types';
 
-export const Row = styled.div<RowProps>((props) => {
+export const Row = styled.div<BaseRowProps>((props) => {
   const { mb, block } = props;
 
   const display = block ? 'flex' : 'inline-flex';
