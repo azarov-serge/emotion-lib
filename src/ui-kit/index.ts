@@ -7,6 +7,7 @@ export * from './Grid';
 export * from './Icon';
 export * from './Input';
 export * from './Modal';
+export * from './Radio';
 export * from './SegmentedPicker';
 export * from './Select';
 export * from './SystemModal';
