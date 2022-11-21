@@ -7,7 +7,6 @@
     "build": "node build.js",
     "start": "webpack-dev-server --mode development --open --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node postinstall.js",
     "publish": "node publish.js"
   },
   "keywords": [],
