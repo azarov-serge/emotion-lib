@@ -1,23 +1,22 @@
 /// <reference types="react" />
-import { CheckboxProps } from './types';
+import { RadioProps } from './types';
+declare type WrapperProps = {
+    mb: number;
+};
 export declare const Wrapper: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;
-} & Required<Pick<CheckboxProps, "mb" | "block">>, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
-declare type LabelProps = Pick<CheckboxProps, 'checked' | 'disabled' | 'error'>;
+} & WrapperProps, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
+declare type LabelProps = Pick<RadioProps, 'checked' | 'disabled' | 'error'>;
 export declare const Label: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;
 } & LabelProps, import("react").DetailedHTMLProps<import("react").LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>, {}>;
-declare type TickProps = Pick<CheckboxProps, 'checked' | 'disabled' | 'error'>;
-export declare const Tick: import("@emotion/styled").StyledComponent<import("../Icon").IconProps & {
-    theme?: import("@emotion/react").Theme | undefined;
-} & TickProps, {}, {}>;
-declare type BoxProps = Pick<CheckboxProps, 'checked' | 'disabled' | 'error' | 'indeterminate'>;
-export declare const Box: import("@emotion/styled").StyledComponent<{
+declare type DotProps = Pick<RadioProps, 'checked' | 'disabled' | 'error'>;
+export declare const Dot: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;
-} & BoxProps, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
+} & DotProps, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {}>;
 export declare const Input: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;

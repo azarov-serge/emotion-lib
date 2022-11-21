@@ -46,6 +46,21 @@ export interface ModalTheme {
     wrapper: SerializedStyles;
     closeButton: SerializedStyles;
 }
+export interface LabelRadioTheme {
+    default: SerializedStyles;
+    disabled: SerializedStyles;
+    error: SerializedStyles;
+}
+export interface DotRadioTheme {
+    default: SerializedStyles;
+    disabled: SerializedStyles;
+    checked: SerializedStyles;
+    error: SerializedStyles;
+}
+export interface RadioTheme {
+    label: LabelRadioTheme;
+    dot: DotRadioTheme;
+}
 export interface OptionSegmentedPickerTheme {
     label: SerializedStyles;
     text: {
@@ -58,6 +73,37 @@ export interface OptionSegmentedPickerTheme {
 export interface SegmentedPickerTheme {
     option: OptionSegmentedPickerTheme;
     default: SerializedStyles;
+}
+interface ToggleSelectTheme {
+    default: SerializedStyles;
+    disabled: SerializedStyles;
+}
+interface OptionsSelectTheme {
+    default: SerializedStyles;
+}
+interface OptionSelectTheme {
+    default: SerializedStyles;
+    disabled: SerializedStyles;
+    selected: SerializedStyles;
+}
+interface NoDataSelectTheme {
+    default: SerializedStyles;
+}
+interface SpinnerSelectTheme {
+    default: SerializedStyles;
+}
+export interface SelectTheme {
+    toggle: ToggleSelectTheme;
+    options: OptionsSelectTheme;
+    option: OptionSelectTheme;
+    noData: NoDataSelectTheme;
+    spinner: SpinnerSelectTheme;
+}
+export interface SystemModalTheme {
+    container: SerializedStyles;
+    title: SerializedStyles;
+    text: SerializedStyles;
+    action: SerializedStyles;
 }
 export interface TabBarTheme {
     wrapper: SerializedStyles;
@@ -122,7 +168,10 @@ export interface UiKitTheme {
     inputBase: InputBaseTheme;
     input: InputTheme;
     modal: ModalTheme;
+    radio: RadioTheme;
     segmentedPicker: SegmentedPickerTheme;
+    select: SelectTheme;
+    systemModal: SystemModalTheme;
     tabBar: TabBarTheme;
     text: TextTheme;
     title: TitleTheme;
@@ -134,3 +183,4 @@ export interface UiKitTheme {
     titleRow: TitleRowTheme;
     textRow: TextRowTheme;
 }
+export {};
