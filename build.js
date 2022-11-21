@@ -8,7 +8,7 @@ const build = async () => {
     console.log('Copy icons')
     await exec('cp -R ./src/assets/icons/emoji ./dist/icons');
     console.log('Copy postinstall')
-    await exec('cp -R ./postinstall.js ./dist/postinstall.js');
+    await exec('cp -R postinstall.js ./dist/postinstall.js');
 };
 
 build();
