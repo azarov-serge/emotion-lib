@@ -69,6 +69,26 @@ export interface ModalTheme {
 }
 // #endregion
 
+// #region RadioTheme
+export interface LabelRadioTheme {
+	default: SerializedStyles;
+	disabled: SerializedStyles;
+	error: SerializedStyles;
+}
+
+export interface DotRadioTheme {
+	default: SerializedStyles;
+	disabled: SerializedStyles;
+	checked: SerializedStyles;
+	error: SerializedStyles;
+}
+
+export interface RadioTheme {
+	label: LabelRadioTheme;
+	dot: DotRadioTheme;
+}
+// #endregion
+
 // #region SegmentPickerTheme
 export interface OptionSegmentedPickerTheme {
 	label: SerializedStyles;
@@ -83,6 +103,48 @@ export interface OptionSegmentedPickerTheme {
 export interface SegmentedPickerTheme {
 	option: OptionSegmentedPickerTheme;
 	default: SerializedStyles;
+}
+// #endregion
+
+// #region SelectTheme
+interface ToggleSelectTheme {
+	default: SerializedStyles;
+	disabled: SerializedStyles;
+}
+
+interface OptionsSelectTheme {
+	default: SerializedStyles;
+}
+
+interface OptionSelectTheme {
+	default: SerializedStyles;
+	disabled: SerializedStyles;
+	selected: SerializedStyles;
+}
+
+interface NoDataSelectTheme {
+	default: SerializedStyles;
+}
+
+interface SpinnerSelectTheme {
+	default: SerializedStyles;
+}
+
+export interface SelectTheme {
+	toggle: ToggleSelectTheme;
+	options: OptionsSelectTheme;
+	option: OptionSelectTheme;
+	noData: NoDataSelectTheme;
+	spinner: SpinnerSelectTheme;
+}
+// #endregion
+
+// #region SystemModalTheme
+export interface SystemModalTheme {
+	container: SerializedStyles;
+	title: SerializedStyles;
+	text: SerializedStyles;
+	action: SerializedStyles;
 }
 // #endregion
 
@@ -149,7 +211,7 @@ export interface NavBarTheme {
 	iconWrapper: SerializedStyles;
 	title: SerializedStyles;
 }
-// #region
+// #endregion
 
 // #region TitleRowTheme
 export interface TitleRowTheme {
@@ -179,7 +241,10 @@ export interface UiKitTheme {
 	inputBase: InputBaseTheme;
 	input: InputTheme;
 	modal: ModalTheme;
+	radio: RadioTheme;
 	segmentedPicker: SegmentedPickerTheme;
+	select: SelectTheme;
+	systemModal: SystemModalTheme;
 	tabBar: TabBarTheme;
 	text: TextTheme;
 	title: TitleTheme;

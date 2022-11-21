@@ -8,6 +8,8 @@ export * from './Icon';
 export * from './Input';
 export * from './Modal';
 export * from './SegmentedPicker';
+export * from './Select';
+export * from './SystemModal';
 export * from './TabBar';
 export * from './Typography';
 

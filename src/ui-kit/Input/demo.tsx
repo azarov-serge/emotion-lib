@@ -100,7 +100,6 @@ export const InputsDemo = () => {
       <div style={{ padding: 50, display: 'flex' }}>
         <div style={{ flexBasis: '25%', width: '25%', padding: '5px' }}>
           <Input
-            id="input-0"
             required
             label="Error input"
             placeholder="Placeholder"
@@ -119,7 +118,6 @@ export const InputsDemo = () => {
 
         <div style={{ flexBasis: '25%', width: '25%', padding: '5px' }}>
           <Input
-            id="input-1"
             label="Success input"
             placeholder="Placeholder"
             validation={validationSuccess}
@@ -158,7 +156,6 @@ export const InputsDemo = () => {
       <div style={{ padding: 50, paddingTop: 0, display: 'flex' }}>
         <div style={{ flexBasis: '25%', width: '25%', padding: '5px' }}>
           <Input
-            id="input-2"
             label="Left Button"
             leftButton={{
               icon: 'research',
@@ -185,7 +182,6 @@ export const InputsDemo = () => {
 
         <div style={{ flexBasis: '25%', width: '25%', padding: '5px' }}>
           <Input
-            id="input-3"
             label="Right Button"
             rightButton={{
               icon: 'closeFill',
@@ -209,7 +205,6 @@ export const InputsDemo = () => {
 
         <div style={{ flexBasis: '25%', width: '25%', padding: '5px' }}>
           <Input
-            id="input-4"
             label="All Buttons and required"
             leftButton={{
               icon: 'research',

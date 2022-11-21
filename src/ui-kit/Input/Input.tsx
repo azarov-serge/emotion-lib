@@ -1,4 +1,5 @@
 import React from 'react';
+import { useId } from '../../hooks/useId';
 import { InputBase } from '../base/InputBase';
 import { Icon } from '../Icon';
 import { ButtonProps, InputProps } from './types';
@@ -9,7 +10,7 @@ type InputButtonProps = ButtonProps & {
 };
 
 export const Button: React.FC<InputButtonProps> = (props) => {
-  const { children, btn, icon, disabled } = props;
+  const { children, btn, icon } = props;
   const StyledButton = btn === 'left' ? Styled.LeftButton : Styled.RightButton;
 
   return (
@@ -30,13 +31,16 @@ export const Input: React.FC<InputProps> = (props) => {
     ...rest
   } = props;
 
+  const id = useId();
+
   const handleChange = disabled ? undefined : onChange;
 
   return (
-    <InputBase {...rest}>
+    <InputBase {...rest} id={id}>
       {leftButton && <Button btn="left" {...leftButton} disabled={disabled} />}
       <Styled.Input
         {...props}
+        id={id}
         placeholder={placeholder}
         forwardRef={forwardRef}
         onChange={handleChange}

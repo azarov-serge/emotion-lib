@@ -1,6 +1,11 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
+const container =
+	(document && document.body) ||
+	(document && document.querySelector('#modal')) ||
+	null;
+
 export const Portal = (props: { children: ReactNode }) => {
 	const { children } = props;
 	const [mounted, setMounted] = useState(false);
@@ -11,5 +16,7 @@ export const Portal = (props: { children: ReactNode }) => {
 		return () => setMounted(false);
 	}, []);
 
-	return mounted ? createPortal(children, document.querySelector('#modal') as Element) : null;
+	return mounted
+		? createPortal(children, container)
+		: null;
 };

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { UiKitProvider } from './providers/UiKitProvider';
-import { Title } from './ui-kit';
+import { SegmentedPicker, Title } from './ui-kit';
 import { uiKitTheme } from './ui-kit/@themes';
 import { ButtonsDemo } from './ui-kit/Button/demo';
 import { IconsDemo } from './ui-kit/Icon/demo';
@@ -21,10 +21,28 @@ import { TitleRowsDemo } from './components/TitleRow/demo';
 import { TextRowsDemo } from './components/TextRow/demo';
 import { ModalsDemo } from './ui-kit/Modal/demo';
 import { NavBarsDemo } from './components/NavBar/demo';
+import { SystemModalsDemo } from './ui-kit/SystemModal/demo';
+import { RadioDemo } from './ui-kit/Radio/demo';
+import { SelectsDemo } from './ui-kit/Select/demo';
 
 export const App = () => {
+	const [theme, setTheme] = useState(uiKitTheme.foodCity);
 	return (
-		<UiKitProvider theme={uiKitTheme.foodCity}>
+		<UiKitProvider theme={theme}>
+			<SegmentedPicker
+				items={[
+					{ label: 'Food City', value: 'foodCity' },
+					{ label: 'NFTea', value: 'NFTea' },
+				]}
+				defaultValue="foodCity"
+				onChange={(value) => {
+					if (value === 'foodCity') {
+						setTheme(uiKitTheme.foodCity);
+					} else {
+						setTheme(uiKitTheme.NFTea);
+					}
+				}}
+			/>
 			<div style={{ padding: 25 }}>
 				<Title level={2}>Кнопки</Title>
 				<ButtonsDemo />
@@ -105,7 +123,7 @@ export const App = () => {
 					</div>
 				</div>
 				<br />
-				<br />
+				<SystemModalsDemo />
 				<hr />
 
 				<Title level={2}>Segment Picker</Title>
@@ -140,8 +158,18 @@ export const App = () => {
 				</div>
 				<hr />
 
+				<Title level={2}>NavBar</Title>
 				<NavBarsDemo />
+				<br />
+				<hr />
 
+				<Title level={2}>Radio</Title>
+				<RadioDemo />
+				<br />
+				<hr />
+
+				<Title level={2}>Selects</Title>
+				<SelectsDemo />
 				<br />
 				<hr />
 			</div>
