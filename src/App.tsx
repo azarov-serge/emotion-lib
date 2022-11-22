@@ -24,6 +24,13 @@ import { NavBarsDemo } from './components/NavBar/demo';
 import { SystemModalsDemo } from './ui-kit/SystemModal/demo';
 import { RadioDemo } from './ui-kit/Radio/demo';
 import { SelectsDemo } from './ui-kit/Select/demo';
+import { MessagesDemo } from './ui-kit/Message/demo';
+import { StepperDemo } from './ui-kit/Stepper/demo';
+import { SwitchersDemo } from './ui-kit/Switcher/demo';
+import { SwitcherRowsDemo } from './components/SwitcherRow/demo';
+import { InfoDemo } from './components/Info/demo';
+import { InfoRowsDemo } from './components/InfoRow/demo';
+import { ProductCardsDemo } from './components/ProductCard/demo';
 
 export const App = () => {
 	const [theme, setTheme] = useState(uiKitTheme.foodCity);
@@ -92,8 +99,16 @@ export const App = () => {
 				<br />
 				<hr />
 
-				<Title level={2}>Checkbox</Title>
-				<CheckboxDemo />
+				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+					<div style={{ width: '50%', margin: 15 }}>
+						<Title level={2}>Checkbox</Title>
+						<CheckboxDemo />
+					</div>
+					<div style={{ width: '50%', margin: 15 }}>
+						<Title level={2}>Radio</Title>
+						<RadioDemo />
+					</div>
+				</div>
 				<hr />
 
 				<Title level={2}>TabBar</Title>
@@ -107,7 +122,7 @@ export const App = () => {
 					</div>
 					<div style={{ width: '45%' }}>
 						<Title level={2}>Info Row</Title>
-						{/* <DemoInfoRow /> */}
+						<InfoRowsDemo />
 					</div>
 				</div>
 				<hr />
@@ -123,7 +138,16 @@ export const App = () => {
 					</div>
 				</div>
 				<br />
-				<SystemModalsDemo />
+				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+					<div style={{ width: '30%' }}>
+						<Title level={2}>SystemModal</Title>
+						<SystemModalsDemo />
+					</div>
+					<div style={{ width: '70%' }}>
+						<Title level={2}>Messages</Title>
+						<MessagesDemo />
+					</div>
+				</div>
 				<hr />
 
 				<Title level={2}>Segment Picker</Title>
@@ -149,7 +173,7 @@ export const App = () => {
 				<div style={{ display: 'flex' }}>
 					<div style={{ width: '45%' }}>
 						<Title level={2}>Switcher Row</Title>
-						{/* <SwitcherRowsDemo /> */}
+						<SwitcherRowsDemo />
 					</div>
 					<div style={{ width: '45%' }}>
 						<Title level={2}>Text Row</Title>
@@ -163,15 +187,32 @@ export const App = () => {
 				<br />
 				<hr />
 
-				<Title level={2}>Radio</Title>
-				<RadioDemo />
-				<br />
-				<hr />
-
 				<Title level={2}>Selects</Title>
 				<SelectsDemo />
 				<br />
 				<hr />
+
+				<Title level={2}>Stepper</Title>
+				<StepperDemo />
+				<br />
+				<hr />
+
+				<div style={{ display: 'flex' }}>
+					<div style={{ width: '45%' }}>
+						<Title level={2}>Switcher</Title>
+						<SwitchersDemo />
+					</div>
+					<div style={{ width: '45%' }}>
+						<Title level={2}>Info</Title>
+						<InfoDemo />
+					</div>
+				</div>
+				<hr />
+
+				<Title level={2}>Product Card</Title>
+				<ProductCardsDemo />
+				<br />
+				<br />
 			</div>
 		</UiKitProvider>
 	);

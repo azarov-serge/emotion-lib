@@ -1,5 +1,8 @@
 import { SerializedStyles } from '@emotion/react';
-import { InputState } from 'ui-kit/base/InputBase/constants';
+import { ProductCardType } from 'components';
+import { InfoType } from '../../components/Info';
+import { ComponentSize } from '../@types';
+import { InputState } from '../base/InputBase/constants';
 import { ButtonSize, ButtonKind } from '../Button';
 import { PriceTextSize, TextSize } from '../Typography';
 
@@ -59,6 +62,13 @@ export interface InputTheme {
 		default: SerializedStyles;
 		disabled: SerializedStyles;
 	};
+}
+// #endregion
+
+// #region MessageTheme
+export interface MessageTheme {
+	wrapper: SerializedStyles;
+	text: SerializedStyles;
 }
 // #endregion
 
@@ -139,6 +149,51 @@ export interface SelectTheme {
 }
 // #endregion
 
+// #region StepperTheme
+export interface ButtonStepperTheme {
+	default: SerializedStyles;
+	loading: SerializedStyles;
+	disabled: SerializedStyles;
+}
+export interface StepperTheme {
+	wrapper: Record<ComponentSize, SerializedStyles>;
+	spinner: SerializedStyles;
+	button: ButtonStepperTheme;
+}
+// #endregion
+
+// #region SwitcherTheme
+export interface SpinnerSwitcherTheme {
+	default: SerializedStyles;
+	checked: SerializedStyles;
+}
+
+export interface KnobSwitcherTheme {
+	default: SerializedStyles;
+	disabled: SerializedStyles;
+	disabledChecked: SerializedStyles;
+}
+
+export interface LabelSwitcherTheme {
+	default: SerializedStyles;
+	checked: SerializedStyles;
+	disabled: SerializedStyles;
+	disabledChecked: SerializedStyles;
+}
+
+export interface TextSwitcherTheme {
+	default: SerializedStyles;
+	disabled: SerializedStyles;
+}
+
+export interface SwitcherTheme {
+	spinner: SpinnerSwitcherTheme;
+	knob: KnobSwitcherTheme;
+	label: LabelSwitcherTheme;
+	text: TextSwitcherTheme;
+}
+// #endregion
+
 // #region SystemModalTheme
 export interface SystemModalTheme {
 	container: SerializedStyles;
@@ -204,12 +259,68 @@ export interface CheckboxRowTheme {
 }
 // #endregion
 
+// #region InfoTheme
+export interface InfoTheme {
+	row: Record<keyof typeof InfoType, SerializedStyles>;
+	title: SerializedStyles;
+	description: SerializedStyles;
+	infoBox: Record<keyof typeof InfoType, SerializedStyles>;
+}
+// #endregion
+
+// #region InfoRowTheme
+export interface InfoRowTheme {
+	row: {
+		default: SerializedStyles;
+		disabled: SerializedStyles;
+	};
+	iconBox: SerializedStyles;
+	description: SerializedStyles;
+}
+// #endregion
+
 // #region NavBarTheme
 export interface NavBarTheme {
 	centerButton: SerializedStyles;
 	caption: SerializedStyles;
 	iconWrapper: SerializedStyles;
 	title: SerializedStyles;
+}
+// #endregion
+
+// #region ProductCard
+export type ProductCardWrapperTheme = Record<ProductCardType, SerializedStyles>;
+
+export type ProductCardImgTheme = SerializedStyles;
+
+export type ProductCardShadowTheme = Record<ProductCardType, SerializedStyles>;
+
+export type ProductCardTextTheme = Record<ProductCardType, SerializedStyles>;
+
+export type ProductCardSubTextTheme = SerializedStyles;
+
+export type ProductCardSeparatorTheme = SerializedStyles;
+
+export type ProductCardCloseButtonTheme = SerializedStyles;
+
+export interface ProductCardTheme {
+	wrapper: ProductCardWrapperTheme;
+	img: ProductCardImgTheme;
+	shadow: ProductCardShadowTheme;
+	text: ProductCardTextTheme;
+	subText: ProductCardSubTextTheme;
+	separator: ProductCardSeparatorTheme;
+	closeButton: ProductCardCloseButtonTheme;
+}
+// #endregion
+
+// #region SwitcherRowTheme
+export interface SwitcherRowTheme {
+	row: {
+		default: SerializedStyles;
+		disabled: SerializedStyles;
+	};
+	description: SerializedStyles;
 }
 // #endregion
 
@@ -240,10 +351,13 @@ export interface UiKitTheme {
 	drawer: SerializedStyles;
 	inputBase: InputBaseTheme;
 	input: InputTheme;
+	message: MessageTheme;
 	modal: ModalTheme;
 	radio: RadioTheme;
 	segmentedPicker: SegmentedPickerTheme;
 	select: SelectTheme;
+	stepper: StepperTheme;
+	switcher: SwitcherTheme;
 	systemModal: SystemModalTheme;
 	tabBar: TabBarTheme;
 	text: TextTheme;
@@ -252,8 +366,12 @@ export interface UiKitTheme {
 	// Components
 	amount: AmountTheme;
 	checkboxRow: CheckboxRowTheme;
+	info: InfoTheme;
+	infoRow: InfoRowTheme;
 	navBar: NavBarTheme;
+	productCard: ProductCardTheme;
 	spinner: SerializedStyles;
+	switcherRow: SwitcherRowTheme;
 	titleRow: TitleRowTheme;
 	textRow: TextRowTheme;
 }
