@@ -1,3 +1,6 @@
-const { exec } = require('child_process');
+const fs = require('fs');
 
-exec('cp -R ./src/assets/fonts ./dist/fonts')
+fs.copyFile('./src/assets/fonts/', './dist/fonts1', (err) => {
+  if (err) throw err;
+  console.log('Fonts was copied');
+});
