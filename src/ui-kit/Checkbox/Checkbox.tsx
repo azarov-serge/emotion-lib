@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useId } from '../../hooks/useId';
+import { useId } from '../../hooks';
 import * as Styled from './styles';
 import { defaultProps } from './Checkbox.defaultProps';
 import { CheckboxProps } from './types';

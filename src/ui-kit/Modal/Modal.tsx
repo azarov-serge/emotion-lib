@@ -1,14 +1,16 @@
 import React, { FC, useEffect } from 'react';
-import { Dialog, modalStore } from '../base';
+import { Dialog } from '../base';
 import { Icon } from '../Icon';
+import { useModal } from '../../contexts';
 import * as Styled from './styles';
 import { ModalProps } from './types';
 
 export const Modal: FC<ModalProps> = (props) => {
   const { isOpen, onClose, children } = props;
+  const { setIsOpen } = useModal();
 
   useEffect(() => {
-    modalStore.setIsOpen(isOpen);
+    setIsOpen(isOpen);
   }, [isOpen]);
 
   return (

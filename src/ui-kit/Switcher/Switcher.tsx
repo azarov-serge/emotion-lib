@@ -1,5 +1,5 @@
 import React from 'react';
-import { useId } from '../../hooks/useId';
+import { useId } from '../../hooks';
 import * as Styled from './styles';
 import { SwitcherProps } from './types';
 import { defaultProps } from './Switcher.defaultProps';

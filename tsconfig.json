@@ -64,6 +64,8 @@
 		"dist",
 		"./src/demo.tsx",
 		"./src/**/demo.tsx",
+		"./src/**/mock.tsx",
+		"./src/**/mock.ts",
 		"./src/App.tsx"
 	]
 }

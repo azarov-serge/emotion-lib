@@ -1,13 +1,15 @@
 import React, { FC, useEffect } from 'react';
+import { useModal } from '../../contexts';
 import * as Styled from './styles';
 import { SystemModalProps } from './types';
-import { modalStore, Portal } from '../base';
+import { Portal } from '../base';
 
 export const SystemModal: FC<SystemModalProps> = (props) => {
   const { isOpen, title, text, actions } = props;
+  const { setIsOpen } = useModal();
 
   useEffect(() => {
-    modalStore.setIsOpen(isOpen);
+    setIsOpen(isOpen);
   }, [isOpen]);
 
   return (

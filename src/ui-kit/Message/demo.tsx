@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { observer } from 'mobx-react';
-import { useStores } from '../../stores/hooks';
+import { useMessages } from '../../contexts';
+import { useId } from '../../hooks';
 import { Button } from '../Button';
 import { MessageStatus } from './types';
 
-export const MessagesDemo = observer(() => {
-  const { messagesStore } = useStores();
+export const MessagesDemo = () => {
+  const { addMessage } = useMessages();
   const [id, setId] = useState(0);
-  const addMessage = (status: MessageStatus) => {
-    messagesStore.add({
-      message: `A ${status} message`,
-      id: `id-${id}-${status}`,
+  const addNewMessage = (status: MessageStatus) => {
+    const messageId = useId();
+
+    addMessage({
+      message: `A ${status} message id(${messageId})`,
+      id: messageId,
       status,
     });
 
@@ -19,15 +21,15 @@ export const MessagesDemo = observer(() => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <Button onClick={() => addMessage(MessageStatus.success)}>
+      <Button onClick={() => addNewMessage(MessageStatus.success)}>
         Success message
       </Button>
-      <Button onClick={() => addMessage(MessageStatus.error)}>
+      <Button onClick={() => addNewMessage(MessageStatus.error)}>
         Error message
       </Button>
-      <Button onClick={() => addMessage(MessageStatus.warning)}>
+      <Button onClick={() => addNewMessage(MessageStatus.warning)}>
         Warning message
       </Button>
     </div>
   );
-});
+};

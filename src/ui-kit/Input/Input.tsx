@@ -1,5 +1,5 @@
 import React from 'react';
-import { useId } from '../../hooks/useId';
+import { useId } from '../../hooks';
 import { InputBase } from '../base/InputBase';
 import { Icon } from '../Icon';
 import { ButtonProps, InputProps } from './types';

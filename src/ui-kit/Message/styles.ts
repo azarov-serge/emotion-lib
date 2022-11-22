@@ -2,15 +2,17 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { UiKitTheme } from '../@themes';
 
+const MESSAGE_WIDTH = 343;
+
 export const MessagesWrapper = styled.div(() => {
 	return css`
 		position: fixed;
 		top: 0;
-		right: 0;
+		right: calc(50% - ${MESSAGE_WIDTH / 2}px);
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		width: 100%;
+		width: auto;
 		height: auto;
 		max-height: 100%;
 	`;
@@ -24,7 +26,7 @@ export const MessageWrapper = styled.div<{ isOpen: boolean }>((props) => {
 		display: flex;
 		align-items: center;
 		z-index: 200;
-		width: 343px;
+		width: ${MESSAGE_WIDTH}px;
 		margin-top: 10px;
 		margin-bottom: 10px;
 		padding: 12px 24px 12px 16px;
