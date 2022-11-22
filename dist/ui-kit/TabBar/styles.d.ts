@@ -12,6 +12,8 @@ export declare const Tab: import("@emotion/styled").StyledComponent<{
     as?: import("react").ElementType<any> | undefined;
 } & TabProps, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
 export declare const TabIcon: import("@emotion/styled").StyledComponent<import("../Icon").IconProps & {
+    children?: import("react").ReactNode;
+} & {
     theme?: import("@emotion/react").Theme | undefined;
 }, {}, {}>;
 export declare const ActiveState: import("@emotion/styled").StyledComponent<{

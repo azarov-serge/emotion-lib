@@ -2,6 +2,8 @@
 import { CheckboxProps } from '../../ui-kit/Checkbox';
 declare type RowProps = Pick<CheckboxProps, 'disabled' | 'error'>;
 export declare const Row: import("@emotion/styled").StyledComponent<import("../../ui-kit/base/BaseRow").BaseRowProps & {
+    children?: import("react").ReactNode;
+} & {
     theme?: import("@emotion/react").Theme | undefined;
 } & RowProps, {}, {}>;
 declare type PriceProps = Pick<CheckboxProps, 'disabled'>;

@@ -10,11 +10,13 @@ export declare const Button: import("@emotion/styled").StyledComponent<{
     isLoading: boolean;
 }, import("react").DetailedHTMLProps<import("react").ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, {}>;
 export declare const ButtonIcon: import("@emotion/styled").StyledComponent<import("../Icon").IconProps & {
+    children?: import("react").ReactNode;
+} & {
     theme?: import("@emotion/react").Theme | undefined;
 } & Pick<StyledButtonProps, "size">, {}, {}>;
 export declare const Spin: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;
-} & Pick<ButtonProps, "kind" | "size" | "icon"> & {
+} & Pick<ButtonProps, "size" | "icon" | "kind"> & {
     isLoading?: boolean | undefined;
 }, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {}>;

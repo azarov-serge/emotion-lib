@@ -2,6 +2,8 @@
 import { TextRowProps } from './types';
 declare type RowProps = Pick<TextRowProps, 'disabled'>;
 export declare const Row: import("@emotion/styled").StyledComponent<import("../../ui-kit/base").BaseRowProps & {
+    children?: import("react").ReactNode;
+} & {
     theme?: import("@emotion/react").Theme | undefined;
 } & RowProps, {}, {}>;
 export declare const Header: import("@emotion/styled").StyledComponent<{

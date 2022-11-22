@@ -36,11 +36,15 @@ export declare const Item: import("@emotion/styled").StyledComponent<{
     as?: import("react").ElementType<any> | undefined;
 }, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
 export declare const Arrow: import("@emotion/styled").StyledComponent<import("../Icon").IconProps & {
+    children?: import("react").ReactNode;
+} & {
     theme?: import("@emotion/react").Theme | undefined;
 } & {
     isOpen: boolean;
     disabled?: boolean | undefined;
 }, {}, {}>;
 export declare const Spinner: import("@emotion/styled").StyledComponent<import("../Icon").IconProps & {
+    children?: import("react").ReactNode;
+} & {
     theme?: import("@emotion/react").Theme | undefined;
 }, {}, {}>;
