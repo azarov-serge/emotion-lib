@@ -51,24 +51,24 @@ export const App = () => {
 				}}
 			/>
 			<div style={{ padding: 25 }}>
-				<Title level={2}>Кнопки</Title>
+				<Title level={2}>Buttons</Title>
 				<ButtonsDemo />
 				<hr />
 
-				<Title level={2}>Иконки</Title>
+				<Title level={2}>Icons</Title>
 				<IconsDemo />
 				<hr />
 
 				<div style={{ display: 'flex' }}>
 					<div style={{ width: '30%' }}>
 						<Title level={2} align="left">
-							Заголовки
+							Titles
 						</Title>
 						<TitlesDemo />
 					</div>
 					<div style={{ width: '30%' }}>
 						<Title level={2} align="left">
-							Текст
+							Texts
 						</Title>
 						<TextsDemo />
 					</div>
