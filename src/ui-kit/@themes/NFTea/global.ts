@@ -6,61 +6,61 @@ import HalvarBreitschriftBold from '../../../assets/fonts/Halvar/HalvarBreitschr
 import HalvarMittelschriftRegular from '../../../assets/fonts/Halvar/HalvarMittelschriftRegular.ttf';
 import HalvarMittelschriftBold from '../../../assets/fonts/Halvar/HalvarMittelschriftBold.ttf';
 
-export const global = css`
-  /* FONTS */
+export const global = css``;
 
-  @font-face {
-    font-family: 'Halvar Breitschrift';
-    src: url('${HalvarBreitschriftThin}') format('truetype');
-    font-weight: 300;
-  }
+// export const global = css`
+//   /* FONTS */
 
-  @font-face {
-    font-family: 'Halvar Breitschrift';
-    src: url('${HalvarBreitschriftRegular}') format('truetype');
-    font-weight: 400;
-  }
+//   @font-face {
+//     font-family: 'Halvar Breitschrift';
+//     src: url('${HalvarBreitschriftThin}') format('truetype');
+//     font-weight: 300;
+//   }
 
-  @font-face {
-    font-family: 'Halvar Breitschrift';
-    src: url('${HalvarBreitschriftBold}') format('truetype');
-    font-weight: 700;
-  }
+//   @font-face {
+//     font-family: 'Halvar Breitschrift';
+//     src: url('${HalvarBreitschriftRegular}') format('truetype');
+//     font-weight: 400;
+//   }
 
-  @font-face {
-    font-family: 'Halvar Mittelschrift';
-    src: url('${HalvarMittelschriftRegular}')
-      format('truetype');
-    font-weight: 400;
-  }
+//   @font-face {
+//     font-family: 'Halvar Breitschrift';
+//     src: url('${HalvarBreitschriftBold}') format('truetype');
+//     font-weight: 700;
+//   }
 
-  @font-face {
-    font-family: 'Halvar Mittelschrift';
-    src: url('${HalvarMittelschriftBold}') format('truetype');
-    font-weight: 700;
-  }
+//   @font-face {
+//     font-family: 'Halvar Mittelschrift';
+//     src: url('${HalvarMittelschriftRegular}')
+//       format('truetype');
+//     font-weight: 400;
+//   }
 
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    min-width: 320px;
-    font-family: 'Halvar Mittelschrift', Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 28px;
-  }
+//   @font-face {
+//     font-family: 'Halvar Mittelschrift';
+//     src: url('${HalvarMittelschriftBold}') format('truetype');
+//     font-weight: 700;
+//   }
 
-  a {
-    text-decoration: none;
+//   html,
+//   body {
+//     margin: 0;
+//     padding: 0;
+//     min-width: 320px;
+//     font-family: 'Halvar Mittelschrift', Helvetica, sans-serif;
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 28px;
+//   }
 
-    color: inherit;
-  }
+//   a {
+//     text-decoration: none;
 
-  * {
-    font-family: 'Halvar Mittelschrift', Helvetica, sans-serif;
-    box-sizing: border-box;
-  }
-`;
+//     color: inherit;
+//   }
 
-console.log('+++ NFTea global', global.styles);
+//   * {
+//     font-family: 'Halvar Mittelschrift', Helvetica, sans-serif;
+//     box-sizing: border-box;
+//   }
+// `;

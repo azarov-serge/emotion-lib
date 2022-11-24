@@ -22,9 +22,6 @@ import HotBeverage from '../../assets/icons/emoji/HotBeverage.png';
 import Hamburger from '../../assets/icons/emoji/Hamburger.png';
 import GreenApple from '../../assets/icons/emoji/GreenApple.png';
 import FrenchFries from '../../assets/icons/emoji/FrenchFries.png';
-// @ts-ignore
-// import pckg from '../../../package.json';
-// const url = './node_modules/emotion-lib/images';
 
 export const iconsMap = {
   flat: {
@@ -54,14 +51,4 @@ export const iconsMap = {
     [IconNameEnum.greenApple]: GreenApple,
     [IconNameEnum.frenchFries]: FrenchFries,
   },
-  // emoji: {
-  //   [IconNameEnum.sushi]: url + '/Sushi.png',
-  //   [IconNameEnum.pizza]: url + '/Pizza.png',
-  //   [IconNameEnum.hotBeverage]: url + '/HotBeverage.png',
-  //   [IconNameEnum.hamburger]: url + '/Hamburger.png',
-  //   [IconNameEnum.greenApple]: url + '/GreenApple.png',
-  //   [IconNameEnum.frenchFries]: url + '/FrenchFries.png',
-  // },
 };
-
-console.log('+++ iconsMap.emoji', iconsMap.emoji);

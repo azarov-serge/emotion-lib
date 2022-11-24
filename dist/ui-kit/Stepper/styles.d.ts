@@ -3,7 +3,7 @@ import { StepperProps } from './types';
 export declare const Wrapper: import("@emotion/styled").StyledComponent<{
     theme?: import("@emotion/react").Theme | undefined;
     as?: import("react").ElementType<any> | undefined;
-} & Required<Pick<StepperProps, "mb" | "size">>, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
+} & Required<Pick<StepperProps, "size" | "mb">>, import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {}>;
 declare type InputProps = {
     uiSize: StepperProps['size'];
 };
