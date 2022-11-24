@@ -6,7 +6,28 @@ import HalvarBreitschriftBold from '../../../assets/fonts/Halvar/HalvarBreitschr
 import HalvarMittelschriftRegular from '../../../assets/fonts/Halvar/HalvarMittelschriftRegular.ttf';
 import HalvarMittelschriftBold from '../../../assets/fonts/Halvar/HalvarMittelschriftBold.ttf';
 
-export const global = css``;
+export const global = css`
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  a {
+    text-decoration: none;
+
+    color: inherit;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`;
 
 // export const global = css`
 //   /* FONTS */

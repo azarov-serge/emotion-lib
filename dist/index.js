@@ -390,7 +390,28 @@
 	path {
 		fill: ${o.Color.Black_Oven_10};
 	}
-`;t.productCard={wrapper:s,img:a,shadow:c,text:l,subText:u,separator:d,closeButton:f}},3081:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.font=void 0,t.font={family1:'"Halvar Breitschrift", Helvetica, sans-serif',family2:'"Halvar Mittelschrift", Helvetica, sans-serif'}},8033:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.global=void 0;const n=r(917);t.global=n.css``},6295:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.theme=void 0;const n=r(9320),o=r(8033),i=r(9831),s=r(1765),a=r(3944),c=r(7329);t.theme=Object.assign(Object.assign({},n.theme),{global:o.global,button:i.button,divider:s.divider,title:a.title,productCard:c.productCard})},9831:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.button=void 0;const n=r(917),o=r(8298),i=r(3081),s={primary:n.css`
+`;t.productCard={wrapper:s,img:a,shadow:c,text:l,subText:u,separator:d,closeButton:f}},3081:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.font=void 0,t.font={family1:'"Halvar Breitschrift", Helvetica, sans-serif',family2:'"Halvar Mittelschrift", Helvetica, sans-serif'}},8033:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.global=void 0;const n=r(917);t.global=n.css`
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  a {
+    text-decoration: none;
+
+    color: inherit;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`},6295:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.theme=void 0;const n=r(9320),o=r(8033),i=r(9831),s=r(1765),a=r(3944),c=r(7329);t.theme=Object.assign(Object.assign({},n.theme),{global:o.global,button:i.button,divider:s.divider,title:a.title,productCard:c.productCard})},9831:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.button=void 0;const n=r(917),o=r(8298),i=r(3081),s={primary:n.css`
 		color: ${o.Color.Black_Oven_35};
 	`,secondary:n.css`
 		color: ${o.Color.Black_Oven_65};
