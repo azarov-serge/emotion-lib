@@ -17,11 +17,11 @@ export declare const iconsMap: {
         warningYellow: import("react").FunctionComponent<import("react").SVGAttributes<SVGAElement>>;
     };
     emoji: {
-        sushi: StaticImageData;
-        pizza: StaticImageData;
-        hotBeverage: StaticImageData;
-        hamburger: StaticImageData;
-        greenApple: StaticImageData;
-        frenchFries: StaticImageData;
+        sushi: string;
+        pizza: string;
+        hotBeverage: string;
+        hamburger: string;
+        greenApple: string;
+        frenchFries: string;
     };
 };
