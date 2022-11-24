@@ -70,8 +70,9 @@ module.exports = (env, argv) => {
 					test: /\.(png|jpe?g|gif)$/i,
 					use: [
 						{
-							loader: 'file-loader',
+							loader: 'url-loader',
 							options: {
+								limit: true,
 								name: '[name].[ext]',
 								outputPath: 'images',
 							},
