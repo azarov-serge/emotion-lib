@@ -32,6 +32,7 @@ module.exports = (env, argv) => {
 			rules: [
 				{
 					test: /\.(ttf|otf)$/i,
+					dependency: { not: ['url'] },
 					use: [
 						{
 							loader: 'url-loader',
